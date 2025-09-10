@@ -1,4 +1,11 @@
 ---
-title: 'Get Plants'
-openapi: 'GET /plants'
+title: "Get Datastore Metadata"
+openapi: "GET /plants"
+description: "Get the details of a given Datastore, including its name, create time, and the list of Agents which are currently configured to use the Datastore."
 ---
+
+https://api.contextual.ai/v1/datastores/{datastore_id}/metadata
+
+#### **Authorizations**
+
+Bearer authentication header of the form `Bearer <token>`, where `<token>` is your auth token.
