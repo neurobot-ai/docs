@@ -1,9 +1,13 @@
 ---
-title: "Get Datastore Metadata"
-openapi: "GET /plants"
-description: "Get the details of a given Datastore, including its name, create time, and the list of Agents which are currently configured to use the Datastore."
+title: "List Datastores"
+openapi: "GET /datastores"
+description: "Retrieve a list of Datastores."
 ---
 
-/datastores/{datastore_id}/metadata
+Performs cursor-based pagination if the number of Datastores exceeds the requested limit. The returned cursor can be passed to the next GET /datastores call to retrieve the next set of Datastores.
 
-Bearer authentication header of the form `Bearer <token>`, where `<token>` is your auth token.
+#### **Authorizations**
+
+<ParamField path="Authorizations" type="string">
+  Bearer authentication header of the form Bearer \<token\>, where \<token\> is your auth token.
+</ParamField>
